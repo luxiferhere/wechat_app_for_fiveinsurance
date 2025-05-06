@@ -1,0 +1,228 @@
+/* pages/index/index.wxss */
+
+/* ---------------------------- 全局容器 ---------------------------- */
+.container {
+  padding: 30rpx;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* ---------------------------- 输入区域 ---------------------------- */
+.area_view {
+  margin: 20rpx 0;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.area_text {
+  color: #606266;
+  font-weight: 200;
+  flex-shrink: 0;
+}
+
+.area_input {
+  width: 60%;
+  height: 80rpx;
+  border: 1rpx solid #dcdfe6;
+  border-radius: 12rpx;
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  transition: border-color 0.3s;
+  line-height: 82rpx
+}
+
+/* ---------------------------- 按钮组 ---------------------------- */
+.compute_button {
+  margin: 40rpx 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30rpx;
+}
+
+.compute_button button {
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  transition: all 0.3s;
+}
+
+.compute_button .left {
+  background: #409eff;
+  color: white;
+}
+
+.compute_button .right {
+  background: #f56c6c;
+  color: white;
+}
+
+/* ---------------------------- 社保明细列表 ---------------------------- */
+.insurance_title {
+  padding: 30rpx;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  font-weight: bold;
+  color: #303133;
+}
+
+.insurance_item {
+  padding: 30rpx;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1rpx solid #ebeef5;
+}
+
+.item_text {
+  color: #606266;
+}
+
+/* ---------------------------- 总计区域 ---------------------------- */
+.total {
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 0 0 16rpx 16rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.people_total { color: #67c23a; }
+.compony_total { color: #e6a23c; }
+
+/* ---------------------------- 交互动效 ---------------------------- */
+button.hover {
+  opacity: 0.8;
+  transform: translateY(-2rpx);
+}
+
+.area_input:focus {
+  border-color: #409eff;
+}
+
+/* pages/index/index.wxss */
+
+/* --------------- 比例输入框样式 --------------- */
+.people_ins input, .compony_ins input {
+  width: 40rpx;              /* 输入框宽度 */
+  height: 40rpx;
+  border: 2rpx solid #409EFF; /* 蓝色边框强调可编辑性 */
+  border-radius: 8rpx;        /* 圆角 */
+  padding: 0 20rpx;
+  text-align: center;         /* 文字居中 */
+  font-size: 28rpx;
+  color: #303133;
+  background: #fff;
+  transition: all 0.3s;      /* 过渡动画 */
+}
+
+/* 聚焦状态强化提示 */
+.people_ins input:focus, .compony_ins input:focus {
+  border-color: #007acc;      /* 深蓝色 */
+  box-shadow: 0 0 10rpx rgba(64, 158, 255, 0.2); /* 发光效果 */
+}
+/* 输入框与符号容器 */
+.input_group {
+  display: flex;       /* 启用弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 8rpx;           /* 元素间距 */
+}
+
+/* 输入框样式 */
+.percentage_input {
+  width: 100rpx;       /* 固定宽度 */
+  height: 60rpx;
+  border: 1rpx solid #dcdfe6;
+  border-radius: 8rpx;
+  text-align: center;
+}
+
+/* 百分比符号样式 */
+.percentage_symbol {
+  color: #909399;
+  font-size: 28rpx;
+}
+
+/* 计算结果样式 */
+.result_value {
+  margin-top: 10rpx;   /* 与输入框保持间距 */
+  color: #606266;
+  font-size: 24rpx;
+}
+/* 个税模块容器 */
+.tax-section {
+  margin-top: 30rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+/* 个税模块样式 */
+.tax-section {
+  margin: 30rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.tax-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.tax-item:last-child {
+  border-bottom: none;
+}
+
+.tax-label {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.tax-value {
+  color: #e64340;
+  font-weight: bold;
+}
+
+.insurance-item {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background: #f8f8f8;
+  border-radius: 12rpx;
+}
+
+.category {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.percentage-input {
+  flex: 0 0 150rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.percentage-input input {
+  width: 80rpx;
+  height: 60rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  text-align: center;
+  margin-right: 10rpx;
+}
